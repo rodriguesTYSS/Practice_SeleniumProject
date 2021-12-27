@@ -7,18 +7,34 @@ using System.Threading.Tasks;
 
 namespace Practice_SeleniumProject.PageObjects
 {
-    internal class DashboardPage
+    public class DashboardPage
     {
-        //a[contains(text(),'Accounts')]
-        private List<IWebElement> dashboardoptions;
+        public IWebDriver driver;
+        public DashboardPage(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
 
-        //li//a[contains(@href,'admins')]
-        private IWebElement adminsInAccounts;
+        public IWebElement accountsLink => driver.FindElement(By.XPath("//a[contains(text(),'Accounts')]"));
 
-        //li//a[contains(@href,'suppliers')]
-        private IWebElement adminsInAccounts;
+        public IWebElement cmsLink => driver.FindElement(By.XPath("//a[contains(text(),'CMS')]"));
 
-        //li//a[contains(@href,'agents')]
-        private IWebElement adminsInAccounts;
+        public IWebElement carsLink => driver.FindElement(By.XPath("//a[contains(text(),'cars')]"));
+
+        public IWebElement hotelsLink => driver.FindElement(By.XPath("//a[contains(text(),'hotels')]"));
+        public IWebElement adminsInAccounts => driver.FindElement(By.XPath("//li//a[contains(@href,'admins')]"));
+
+        public IWebElement suppliersInAccounts => driver.FindElement(By.XPath("//li//a[contains(@href,'suppliers')]"));
+
+        public IWebElement agentsInAccounts => driver.FindElement(By.XPath("//li//a[contains(@href,'agents')]"));
+
+        public IWebElement customersInAccounts => driver.FindElement(By.XPath("//li//a[contains(@href,'customers')]"));
+        
+        public IWebElement guestCustomersInAccounts => driver.FindElement(By.XPath("//li//a[contains(@href,'guest')]"));
+
+        public IWebElement logoutButton => driver.FindElement(By.XPath("//*[@id='logout']/a"));
+
+
     }
+
 }

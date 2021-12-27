@@ -5,7 +5,11 @@
 		<Parameter name="url" value="https://phptravels.net/api/admin"/>
 		<Parameter name="username" value="admin@phptravels.com" />
 		<Parameter name="password" value="demoadmin" />
-		<Parameter name="wrongPassword" value="demoadmin" />
+		<Parameter name="wrongPassword" value="Testing@123" />
 		<Parameter name="browser" value="Chrome" />
+		<Parameter name="customerFirstName" value="Prakash" />
+		<Parameter name="customerLastName" value="Kumar" />
+		<Parameter name="customerEmail" value="Ankit@gmail.com" />
+		<Parameter name="customerPassword" value="password" />
 	</TestRunParameters>
 </RunSettings>

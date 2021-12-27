@@ -4,7 +4,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace Practice_SeleniumProject
 {
-    public class Tests
+    public class Tester
     {
         public IWebDriver driver;
         [OneTimeSetUp]
